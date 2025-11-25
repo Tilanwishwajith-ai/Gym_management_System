@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate, Link } from 'react-router-dom'; // useNavigate import කරන්න
+
+export default function AddMember() {
     const [name, setName] = useState("");
     const [age, setAge] = useState("");
     const [pkg, setPkg] = useState("");
@@ -31,4 +34,20 @@ import axios from 'axios';
                 <div className="form-group">
                     <label>Member Name</label>
                     <input type="text" className="form-control" placeholder="Enter full name" value={name} onChange={(e) => setName(e.target.value)} required />
+                </div>
+                
+                <div className="form-group">
+                    <label>Age</label>
+                    <input type="number" className="form-control" placeholder="Enter age" value={age} onChange={(e) => setAge(e.target.value)} required />
+                </div>
+
+                <div className="form-group">
+                    <label>Package</label>
+                    <input type="text" className="form-control" placeholder="Ex: Gold / Silver" value={pkg} onChange={(e) => setPkg(e.target.value)} required />
+                </div>
+
+                <button type="submit" className="btn-submit">Save Member</button>
+            </form>
+        </div>
+    )
 }
