@@ -88,3 +88,37 @@ body {
   outline: none;
   box-shadow: 0 0 5px rgba(0, 210, 255, 0.3);
 }
+
+/* Button Style */
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Table Container (List) */
+.table-container {
+  background-color: #1e1e2f; /* Table එකේ පසුබිම */
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 1px solid #333;
+}
+
+.table-container h3 {
+  color: white;
+  margin-bottom: 20px;
+}
