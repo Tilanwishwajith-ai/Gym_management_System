@@ -33,4 +33,26 @@ function App() {
                  <AllMembers />
               </ProtectedRoute>
             } />
+
+            {/* 3. Add Page (Protected) */}
+            <Route path="/add" element={
+              <ProtectedRoute>
+                 <div className="navbar"><h1>💪 Fitness Gym Manager</h1></div>
+                 <AddMember />
+              </ProtectedRoute>
+            } />
+
+            {/* 4. Profile Page (Protected) */}
+            <Route path="/profile/:id" element={
+              <ProtectedRoute>
+                 <div className="navbar"><h1>💪 Fitness Gym Manager</h1></div>
+                 <MemberProfile />
+              </ProtectedRoute>
+            } />
+         </Routes>
+      </div>
+    </BrowserRouter>
+  );
+}
+
 export default App;
