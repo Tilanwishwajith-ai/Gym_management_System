@@ -41,4 +41,12 @@ router.put('/update/:id', async (req, res) => {
         res.status(500).send({ status: "Error with updating data", error: err.message });
     }
 });
+
+// 5. Delete (වෙනසක් නෑ)
+router.delete('/delete/:id', async (req, res) => {
+    const userId = req.params.id;
+    try { await Member.findByIdAndDelete(userId); res.status(200).send({ status: "User deleted" }); } 
+    catch (err) { res.status(500).send({ error: err.message }); }
+});
+
 module.exports = router;
