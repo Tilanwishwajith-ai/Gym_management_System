@@ -64,3 +64,27 @@ body {
 }
 
 .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #b0b0b0;
+  font-weight: 500;
+}
+
+/* Input Fields */
+.form-control {
+  width: 100%;
+  padding: 12px;
+  background-color: #2a2a40; /* Input එක ඇතුල කළු පාට */
+  border: 1px solid #444;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.form-control:focus {
+  border-color: #00d2ff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 210, 255, 0.3);
+}
